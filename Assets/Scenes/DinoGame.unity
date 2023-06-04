@@ -1045,6 +1045,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gravity: 19.62
   jumpForce: 8
+  spritesSwitching: 0
 --- !u!114 &981016975
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1054,12 +1055,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 981016970}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1b7d5b780d0d44a46b9f5a60deeb3c0a, type: 3}
+  m_Script: {fileID: 11500000, guid: 890f0d0e2cda84801a65e08a45abce05, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   sprites:
   - {fileID: 21300000, guid: 26b9b2b93e7934d21bf3d655b01a88f5, type: 3}
   - {fileID: 21300000, guid: 0f1e83ff36833431e8898a9f1bfe09db, type: 3}
+  spriteRenderer: {fileID: 0}
+  player: {fileID: 981016974}
+  idleSprite: {fileID: 21300000, guid: a1dff19e05563435eae55b798215c333, type: 3}
 --- !u!1 &1487881862
 GameObject:
   m_ObjectHideFlags: 0

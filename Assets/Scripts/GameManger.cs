@@ -12,7 +12,7 @@ public class GameManger : MonoBehaviour {
     public Button retryButton;
     private Player player;
     private Spawner spawner;
-    private float score;
+    public float score;
     private void Awake() {
         if (Instance == null) {
             Instance = this;

@@ -25,7 +25,10 @@ public class Spawner : MonoBehaviour {
                 break;
             }
             spawnChance -= obj.spawnChance;
+
         }
-        Invoke(nameof(Spawn), Random.Range(minSpawnRate, maxSpawnRate));
+        var decrease = Mathf.Min(1, GameManger.Instance.score / 1000);
+
+        Invoke(nameof(Spawn), Random.Range(minSpawnRate, maxSpawnRate - decrease));
     }
 }

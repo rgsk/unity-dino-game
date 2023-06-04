@@ -3,22 +3,37 @@ using UnityEngine;
 public class PlayerAnimatedSprite : AnimatedSprite {
 
     public Player player;
-    public Sprite idleSprite;
-    private bool on = false;
+    public Sprite[] jumpSprites;
+    private bool walking = false;
+    private int jumpFrame = 0;
+    private float startOfJump;
 
     private void Update() {
         if (player) {
-            if (player.spritesSwitching) {
-                if (!on) {
-                    on = true;
+            if (player.walking) {
+                if (!walking) {
+                    walking = true;
+                    CancelInvoke(nameof(AnimateJump));
                     Animate();
                 }
             } else {
-                on = false;
-                spriteRenderer.sprite = idleSprite;
-                CancelInvoke();
+                if (walking) {
+                    walking = false;
+                    CancelInvoke(nameof(Animate));
+                    jumpFrame = 0;
+                    AnimateJump();
+                }
             }
         }
+    }
+
+    public void AnimateJump() {
+        jumpFrame++;
+        if (jumpFrame >= jumpSprites.Length) {
+            jumpFrame = 0;
+        }
+        spriteRenderer.sprite = jumpSprites[jumpFrame];
+        Invoke(nameof(AnimateJump), 0.82f / jumpSprites.Length);
     }
 
 }

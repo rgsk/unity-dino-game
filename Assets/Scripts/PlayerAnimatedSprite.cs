@@ -4,24 +4,23 @@ public class PlayerAnimatedSprite : AnimatedSprite {
 
     public Player player;
     public Sprite[] jumpSprites;
-    private bool walking = false;
+    private bool jumpActive = false;
     private int jumpFrame = 0;
-    private float startOfJump;
 
     private void Update() {
         if (player) {
-            if (player.walking) {
-                if (!walking) {
-                    walking = true;
-                    CancelInvoke(nameof(AnimateJump));
-                    Animate();
-                }
-            } else {
-                if (walking) {
-                    walking = false;
+            if (player.jumping) {
+                if (!jumpActive) {
+                    jumpActive = true;
                     CancelInvoke(nameof(Animate));
                     jumpFrame = 0;
                     AnimateJump();
+                }
+            } else {
+                if (jumpActive) {
+                    jumpActive = false;
+                    CancelInvoke(nameof(AnimateJump));
+                    Animate();
                 }
             }
         }

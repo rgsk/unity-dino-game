@@ -6,6 +6,7 @@ public class Spawner : MonoBehaviour {
         public GameObject prefab;
         [Range(0f, 1f)]
         public float spawnChance;
+        public float level2SpawnChance;
     }
     public SpawnableObject[] objects;
     public float minSpawnRate = 1f;
@@ -19,12 +20,13 @@ public class Spawner : MonoBehaviour {
     private void Spawn() {
         float spawnChance = Random.value;
         foreach (var obj in objects) {
-            if (spawnChance < obj.spawnChance) {
+            var spawnChanceConsidered = GameManger.Instance.level == 2 ? obj.level2SpawnChance : obj.spawnChance;
+            if (spawnChance < spawnChanceConsidered) {
                 GameObject obstacle = Instantiate(obj.prefab);
                 obstacle.transform.position += transform.position;
                 break;
             }
-            spawnChance -= obj.spawnChance;
+            spawnChance -= spawnChanceConsidered;
 
         }
         var decrease = Mathf.Min(1, GameManger.Instance.score / 1000);

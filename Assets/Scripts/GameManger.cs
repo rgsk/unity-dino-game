@@ -13,6 +13,7 @@ public class GameManger : MonoBehaviour {
     private Player player;
     private Spawner spawner;
     public float score;
+    public int level = 1;
     private void Awake() {
         if (Instance == null) {
             Instance = this;
@@ -45,11 +46,12 @@ public class GameManger : MonoBehaviour {
         gameOverText.gameObject.SetActive(false);
         retryButton.gameObject.SetActive(false);
         score = 0;
+        level = 1;
         UpdateHighScore();
     }
 
     public void NextLevel() {
-        gameSpeed += gameSpeedIncrease * 10 * Time.deltaTime;
+        level = 2;
     }
 
     private void Update() {

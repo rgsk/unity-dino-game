@@ -14,6 +14,9 @@ public class AnimatedSprite : MonoBehaviour {
         // and gameSpeed is not 0
         Invoke(nameof(Animate), 0f);
     }
+    private void OnDisable() {
+        CancelInvoke();
+    }
     private void Animate() {
         frame++;
         if (frame >= sprites.Length) {

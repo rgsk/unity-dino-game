@@ -44,7 +44,10 @@ public class GameManger : MonoBehaviour {
         spawner.gameObject.SetActive(true);
         gameOverText.gameObject.SetActive(false);
         retryButton.gameObject.SetActive(false);
+        score = 0;
+        UpdateHighScore();
     }
+
     private void Update() {
         gameSpeed += gameSpeedIncrease * Time.deltaTime;
         score += gameSpeed * Time.deltaTime;
@@ -57,5 +60,14 @@ public class GameManger : MonoBehaviour {
         spawner.gameObject.SetActive(false);
         gameOverText.gameObject.SetActive(true);
         retryButton.gameObject.SetActive(true);
+        UpdateHighScore();
+    }
+    private void UpdateHighScore() {
+        float highScore = PlayerPrefs.GetFloat("highScore", 0);
+        if (score > highScore) {
+            highScore = score;
+            PlayerPrefs.SetFloat("highScore", highScore);
+        }
+        highScoreText.text = Mathf.FloorToInt(highScore).ToString("D5");
     }
 }

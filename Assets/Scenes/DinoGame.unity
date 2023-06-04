@@ -1064,14 +1064,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 890f0d0e2cda84801a65e08a45abce05, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sprites:
-  - {fileID: 21300000, guid: 9b5afc85e3452409488b574950eede36, type: 3}
-  - {fileID: 21300000, guid: a81ce6e47ee9b4acdb1e085e9cd9044d, type: 3}
-  - {fileID: 21300000, guid: 49ac29a43c2344fa08f30e045e8f19cf, type: 3}
-  - {fileID: 21300000, guid: 4d10c293cd3d94ab1aff769d5ac9085e, type: 3}
-  - {fileID: 21300000, guid: 397697a9d55694caba321743d5ed2c27, type: 3}
-  - {fileID: 21300000, guid: 51b7199fa3dca41e7922eec8931cb9c9, type: 3}
-  - {fileID: 21300000, guid: 99573edd959bf47329cdbca8e83e466b, type: 3}
+  sprites: []
   spriteRenderer: {fileID: 0}
   player: {fileID: 981016974}
   jumpSprites:
@@ -1084,6 +1077,25 @@ MonoBehaviour:
   - {fileID: 21300000, guid: cf306b32bb07a405da529f951910c0a1, type: 3}
   - {fileID: 21300000, guid: 0e74521007ffd462fa99a0ce27b7fd03, type: 3}
   crouchSprite: {fileID: 21300000, guid: cbc2fb1ba388149f6ae410fc3bcfb977, type: 3}
+  walkingSprites:
+  - {fileID: 21300000, guid: 9ab413fdc334344759f410951fdf0280, type: 3}
+  - {fileID: 21300000, guid: bae360fad287442fab9e92328110e907, type: 3}
+  - {fileID: 21300000, guid: 9d6357a71dc6349a1a47465b3776ef8e, type: 3}
+  - {fileID: 21300000, guid: 5c3f47180515a425f944f597641117aa, type: 3}
+  - {fileID: 21300000, guid: b2f6f0f8299dd4636a36b2598126a5c2, type: 3}
+  - {fileID: 21300000, guid: 168d162dec17a4fe2833ce4c79911a34, type: 3}
+  - {fileID: 21300000, guid: 9165950529d4143fba0a6904b8c97006, type: 3}
+  - {fileID: 21300000, guid: 9234a83a2a4904731a515bcf8d67cce6, type: 3}
+  - {fileID: 21300000, guid: 060332f2dfec9404494e573c7bb1afff, type: 3}
+  - {fileID: 21300000, guid: 8a548bfc6f44c4c32860ee5dd0ba6353, type: 3}
+  runningSprites:
+  - {fileID: 21300000, guid: 9b5afc85e3452409488b574950eede36, type: 3}
+  - {fileID: 21300000, guid: a81ce6e47ee9b4acdb1e085e9cd9044d, type: 3}
+  - {fileID: 21300000, guid: 49ac29a43c2344fa08f30e045e8f19cf, type: 3}
+  - {fileID: 21300000, guid: 4d10c293cd3d94ab1aff769d5ac9085e, type: 3}
+  - {fileID: 21300000, guid: 397697a9d55694caba321743d5ed2c27, type: 3}
+  - {fileID: 21300000, guid: 51b7199fa3dca41e7922eec8931cb9c9, type: 3}
+  - {fileID: 21300000, guid: 99573edd959bf47329cdbca8e83e466b, type: 3}
 --- !u!1 &1487881862
 GameObject:
   m_ObjectHideFlags: 0

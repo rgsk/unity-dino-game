@@ -48,6 +48,10 @@ public class GameManger : MonoBehaviour {
         UpdateHighScore();
     }
 
+    public void NextLevel() {
+        gameSpeed += gameSpeedIncrease * 10 * Time.deltaTime;
+    }
+
     private void Update() {
         gameSpeed += gameSpeedIncrease * Time.deltaTime;
         score += gameSpeed * Time.deltaTime;

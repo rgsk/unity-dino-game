@@ -8,8 +8,29 @@ public class PlayerAnimatedSprite : AnimatedSprite {
     private bool jumpActive = false;
     private bool crouchActive = false;
     private int jumpFrame = 0;
+    public Sprite[] walkingSprites;
+    public Sprite[] runningSprites;
+    private bool assignedRunningSprites = false;
+
+    private void Start() {
+        sprites = walkingSprites;
+        assignedRunningSprites = false;
+    }
+
+    private void OnDisable() {
+        sprites = walkingSprites;
+        assignedRunningSprites = false;
+    }
+
 
     private void Update() {
+        if (
+            !assignedRunningSprites &&
+            GameManger.Instance.score >= 500) {
+            GameManger.Instance.NextLevel();
+            assignedRunningSprites = true;
+            sprites = runningSprites;
+        }
         if (player) {
             if (player.jumping) {
                 if (!jumpActive) {

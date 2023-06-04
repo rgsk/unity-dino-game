@@ -7,8 +7,6 @@ public class Player : MonoBehaviour {
     public float jumpForce = 8f;
     public bool jumping = false;
     public bool crouching = false;
-    private Vector3 standingCenter = new Vector3(-1.5f, 0, 0);
-    private Vector3 crouchingCenter = new Vector3(0, -1, 0);
     private void Awake() {
         character = GetComponent<CharacterController>();
     }
@@ -23,11 +21,13 @@ public class Player : MonoBehaviour {
             jumping = false;
             direction.y = -10;
             character.Move(direction * Time.deltaTime);
-            character.center = crouchingCenter;
+            character.center = new Vector3(0.5f, -1, 0);
+            character.radius = 0.3f;
             return;
         } else {
             crouching = false;
-            character.center = standingCenter;
+            character.center = new Vector3(-1.5f, 0, 0);
+            character.radius = 0.4583333f;
         }
 
         direction += Vector3.down * gravity * Time.deltaTime;

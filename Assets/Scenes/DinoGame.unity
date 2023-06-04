@@ -910,10 +910,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objects:
+  - prefab: {fileID: 845496971518357622, guid: f44b4c7a45d0541c7a763104e9e9e012, type: 3}
+    spawnChance: 0.3
   - prefab: {fileID: 593679198675156429, guid: 0114e500ef62647d8b4fef287308a21f, type: 3}
-    spawnChance: 0.5
+    spawnChance: 0.3
   - prefab: {fileID: 648185239966319952, guid: 7dd04123d11e84c22b6d4134c67a402c, type: 3}
-    spawnChance: 0.5
+    spawnChance: 0.3
   - prefab: {fileID: 8397142446330586893, guid: c1c401d8d072c427f84ad29fd2a889f6, type: 3}
     spawnChance: 0.2
   - prefab: {fileID: 3709903544759216568, guid: 76a28c8b7f449428f92d286d20eb7ec5, type: 3}

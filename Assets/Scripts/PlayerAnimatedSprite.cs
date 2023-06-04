@@ -4,7 +4,9 @@ public class PlayerAnimatedSprite : AnimatedSprite {
 
     public Player player;
     public Sprite[] jumpSprites;
+    public Sprite crouchSprite;
     private bool jumpActive = false;
+    private bool crouchActive = false;
     private int jumpFrame = 0;
 
     private void Update() {
@@ -16,13 +18,25 @@ public class PlayerAnimatedSprite : AnimatedSprite {
                     jumpFrame = 0;
                     AnimateJump();
                 }
+            } else if (player.crouching) {
+                if (!crouchActive) {
+                    crouchActive = true;
+                    CancelInvoke(nameof(Animate));
+                    CancelInvoke(nameof(AnimateJump));
+                    spriteRenderer.sprite = crouchSprite;
+                }
             } else {
                 if (jumpActive) {
                     jumpActive = false;
                     CancelInvoke(nameof(AnimateJump));
                     Animate();
                 }
+                if (crouchActive) {
+                    crouchActive = false;
+                    Animate();
+                }
             }
+
         }
     }
 

@@ -910,6 +910,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objects:
+  - prefab: {fileID: 593679198675156429, guid: 0114e500ef62647d8b4fef287308a21f, type: 3}
+    spawnChance: 0.5
+  - prefab: {fileID: 648185239966319952, guid: 7dd04123d11e84c22b6d4134c67a402c, type: 3}
+    spawnChance: 0.5
   - prefab: {fileID: 8397142446330586893, guid: c1c401d8d072c427f84ad29fd2a889f6, type: 3}
     spawnChance: 0.2
   - prefab: {fileID: 3709903544759216568, guid: 76a28c8b7f449428f92d286d20eb7ec5, type: 3}
@@ -922,8 +926,6 @@ MonoBehaviour:
     spawnChance: 0.12
   - prefab: {fileID: 2829139869056031163, guid: 13b8455eca7974c28977a82e651169b0, type: 3}
     spawnChance: 0.1
-  - prefab: {fileID: 6547059974147310181, guid: 4ddc2c17ed73544ff82b9dbbe67f0cfc, type: 3}
-    spawnChance: 0.05
   minSpawnRate: 1
   maxSpawnRate: 2
 --- !u!1 &981016970
@@ -1045,7 +1047,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gravity: 19.62
   jumpForce: 8
-  walking: 0
+  jumping: 0
+  crouching: 0
 --- !u!114 &981016975
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1077,6 +1080,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: be11d513411d242dbbc851c6d173433a, type: 3}
   - {fileID: 21300000, guid: cf306b32bb07a405da529f951910c0a1, type: 3}
   - {fileID: 21300000, guid: 0e74521007ffd462fa99a0ce27b7fd03, type: 3}
+  crouchSprite: {fileID: 21300000, guid: cbc2fb1ba388149f6ae410fc3bcfb977, type: 3}
 --- !u!1 &1487881862
 GameObject:
   m_ObjectHideFlags: 0

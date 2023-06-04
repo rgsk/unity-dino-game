@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class AnimatedSprite : MonoBehaviour {
     public Sprite[] sprites;
-    private SpriteRenderer spriteRenderer;
+    public SpriteRenderer spriteRenderer;
     private int frame;
     private void Awake() {
         spriteRenderer = GetComponent<SpriteRenderer>();
@@ -17,7 +17,7 @@ public class AnimatedSprite : MonoBehaviour {
     private void OnDisable() {
         CancelInvoke();
     }
-    private void Animate() {
+    public void Animate() {
         frame++;
         if (frame >= sprites.Length) {
             frame = 0;

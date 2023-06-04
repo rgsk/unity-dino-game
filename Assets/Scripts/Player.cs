@@ -5,6 +5,7 @@ public class Player : MonoBehaviour {
     private Vector3 direction;
     public float gravity = 9.81f * 2f;
     public float jumpForce = 8f;
+    public bool spritesSwitching = false;
     private void Awake() {
         character = GetComponent<CharacterController>();
     }
@@ -15,13 +16,14 @@ public class Player : MonoBehaviour {
     private void Update() {
         direction += Vector3.down * gravity * Time.deltaTime;
         if (character.isGrounded) {
+            spritesSwitching = true;
             direction = Vector3.down;
-
             if (
                 Input.GetButton("Jump") ||
                 Input.GetKey(KeyCode.UpArrow) ||
                 Input.GetKey(KeyCode.W)
               ) {
+                spritesSwitching = false;
                 direction = Vector3.up * jumpForce;
             }
         }

@@ -987,7 +987,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: a1dff19e05563435eae55b798215c333, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 445654c5456084367b9b46694289ee52, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1006,8 +1006,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 981016970}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -6.71, y: 0, z: 0}
+  m_LocalScale: {x: 0.2, y: 0.2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -1030,7 +1030,7 @@ CharacterController:
   m_StepOffset: 0.3
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Center: {x: -1.5, y: 0, z: 0}
 --- !u!114 &981016974
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1059,11 +1059,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sprites:
-  - {fileID: 21300000, guid: 26b9b2b93e7934d21bf3d655b01a88f5, type: 3}
-  - {fileID: 21300000, guid: 0f1e83ff36833431e8898a9f1bfe09db, type: 3}
+  - {fileID: 21300000, guid: 9ab413fdc334344759f410951fdf0280, type: 3}
+  - {fileID: 21300000, guid: bae360fad287442fab9e92328110e907, type: 3}
+  - {fileID: 21300000, guid: 9d6357a71dc6349a1a47465b3776ef8e, type: 3}
+  - {fileID: 21300000, guid: 5c3f47180515a425f944f597641117aa, type: 3}
+  - {fileID: 21300000, guid: b2f6f0f8299dd4636a36b2598126a5c2, type: 3}
+  - {fileID: 21300000, guid: 168d162dec17a4fe2833ce4c79911a34, type: 3}
+  - {fileID: 21300000, guid: 9165950529d4143fba0a6904b8c97006, type: 3}
+  - {fileID: 21300000, guid: 9234a83a2a4904731a515bcf8d67cce6, type: 3}
+  - {fileID: 21300000, guid: 060332f2dfec9404494e573c7bb1afff, type: 3}
+  - {fileID: 21300000, guid: 8a548bfc6f44c4c32860ee5dd0ba6353, type: 3}
   spriteRenderer: {fileID: 0}
   player: {fileID: 981016974}
-  idleSprite: {fileID: 21300000, guid: a1dff19e05563435eae55b798215c333, type: 3}
+  idleSprite: {fileID: 21300000, guid: 445654c5456084367b9b46694289ee52, type: 3}
 --- !u!1 &1487881862
 GameObject:
   m_ObjectHideFlags: 0
